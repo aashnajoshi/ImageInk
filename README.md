@@ -11,5 +11,5 @@ Python(3.8) **
   python main.py
 ```
 ## Description about various files:
-- The "Requirements.txt" file contains all required modules for GPT-Based models.  
+- The "Requirements.txt" file contains all required modules for the project.  
 - The ".env" file contains all the credentials and secret information.
