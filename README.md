@@ -7,12 +7,12 @@ ImageInk analyzes images and generates creative stories based on their content. 
   pip install -r requirements.txt 
 ```
 
-## While to run the code:
-### Console-based version:
+### While to run the code:
+#### Console-based version:
 ```bash
 python main.py
 ```
-### Streamlit-based version:
+#### Streamlit-based version:
 ```bash
 streamlit run app.py
 ```
