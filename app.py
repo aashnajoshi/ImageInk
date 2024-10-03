@@ -5,7 +5,6 @@ from openai import AzureOpenAI
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
 load_dotenv()
 
 vision_endpoint = os.getenv('AZURE_VISION_ENDPOINT')
@@ -14,7 +13,6 @@ openai_endpoint = os.getenv('AZURE_OPENAI_ENDPOINT')
 openai_key = os.getenv('AZURE_OPENAI_KEY')
 openai_deployment_name = os.getenv('AZURE_OPENAI_DEPLOYMENT_NAME')
 
-# Initialize clients
 vision_client = ImageAnalysisClient(endpoint=vision_endpoint, credential=AzureKeyCredential(vision_key))
 openai_client = AzureOpenAI(azure_endpoint=openai_endpoint, api_key=openai_key, api_version="2024-02-15-preview")
 
@@ -47,7 +45,6 @@ def generate_story(caption):
 def main():
     """Main function to run the Streamlit app."""
     st.title("Image Analysis and Story Generator")
-
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "bmp"])
     
     if uploaded_file is not None:

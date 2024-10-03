@@ -18,6 +18,7 @@ vision_client = ImageAnalysisClient(endpoint=vision_endpoint, credential=AzureKe
 openai_client = AzureOpenAI(azure_endpoint=openai_endpoint, api_key=openai_key, api_version="2024-02-15-preview")
 
 def analyze_image(image_path):
+    """Analyze the image using Azure Vision API."""
     print('\nAnalyzing image...')
     try:
         with open(image_path, "rb") as f:
@@ -28,12 +29,14 @@ def analyze_image(image_path):
         return None
 
 def display_analysis_results(result):
+    """Extract captions from analysis results."""
     captions = [result.caption.text] if result.caption else []
     for caption in result.dense_captions.list:
         captions.append(f"'{caption.text}' (confidence: {caption.confidence * 100:.2f}%)")
     return captions[:5]  # Return only the top 5 captions
 
 def generate_story(caption):
+    """Generate a story based on the caption using OpenAI API."""
     prompt = f"Write a creative story in 200 words based on this caption: {caption}"
     response = openai_client.chat.completions.create(
         model=openai_deployment_name,
@@ -43,8 +46,10 @@ def generate_story(caption):
     return response.choices[0].message.content.strip()
 
 def main():
+    """Main function to open Tkinter window for input. """
     tk.Tk().withdraw()
     image_path = filedialog.askopenfilename(title="Select an Image", filetypes=[("Image Files", "*.jpg;*.jpeg;*.png;*.bmp")])
+    
     if not image_path:
         print("No file selected.")
         return
