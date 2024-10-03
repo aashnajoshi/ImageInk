@@ -7,12 +7,17 @@ ImageInk is a repository featuring two applications that analyze images and gene
 ```
 
 ## While to run the code:
+### Console-based version:
 ```bash
-  python {file_name}.py
+python main.py
+```
+### Streamlit-based version:
+```bash
+streamlit run app.py
 ```
 
 ## Description about various files:
 - `.env:` Contains all the credentials and secret information. 
-- `app.py:` Contains a streamlit based version of the main code. 
-- `main.py:` Contains a console based app to create a story based on the image i sent 
+- `app.py:` Contains a streamlit-based version of the main code. 
+- `main.py:` Contains a console-based app to create a story based on the image I sent. 
 - `requirements.txt:` Contains all required modules for the project.   
