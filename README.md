@@ -17,7 +17,7 @@ streamlit run app.py
 ```
 
 ## Description about various files:
-- `.env:` Contains all the credentials and secret information. 
-- `app.py:` Contains a streamlit-based version of the main code. 
-- `main.py:` Contains a console-based app to create a story based on the image I sent. 
-- `requirements.txt:` Contains all required modules for the project.   
+- **.env:** Contains all the credentials and secret information. 
+- **app.py:** Contains a streamlit-based version of the main code. 
+- **main.py:** Contains a console-based app to create a story based on the image I sent. 
+- **requirements.txt:** Contains all required modules for the project.   
