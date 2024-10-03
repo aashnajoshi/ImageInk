@@ -44,7 +44,7 @@ def generate_story(caption):
 
 def main():
     """Main function to run the Streamlit app."""
-    st.title("Image Analysis and Story Generator")
+    st.title("Imageink")
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "bmp"])
     
     if uploaded_file is not None:
