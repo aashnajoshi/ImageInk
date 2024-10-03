@@ -1,7 +1,8 @@
 # ImageInk
 ImageInk analyzes images and generates creative stories based on their content. Leveraging Azure's image analysis and OpenAI's language model, this project combines technology and creativity. Whether you're a developer integrating AI or a storyteller seeking inspiration, ImageInk offers tools to enhance your imagination through visual content.
 
-## All required libraries can be installed using a single-line command:
+## Usage
+### All required libraries can be installed using a single-line command:
 ```bash
   pip install -r requirements.txt 
 ```
